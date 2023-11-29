@@ -54,14 +54,14 @@ def domain_name(url):
 
 # testing -------------------------------------------------
 
-message = "Good evening"
-message = encrypt_this(message)
-print("Encripted: ", message)
-print("Decrypted: ", decipher_this(message))
+# message = "Good evening"
+# message = encrypt_this(message)
+# print("Encripted: ", message)
+# print("Decrypted: ", decipher_this(message))
 
 # --------------------------------------------
-url = "https://www.cnet.com"
-url = "http://www.zombie-bites.com"
-url = "http://github.com/carbonfive/raygun"
-print(domain_name(url))
+# url = "https://www.cnet.com"
+# url = "http://www.zombie-bites.com"
+# url = "http://github.com/carbonfive/raygun"
+# print(domain_name(url))
 # -------------------------------------------
