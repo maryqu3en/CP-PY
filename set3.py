@@ -1,4 +1,4 @@
-# The Hashtag Generator ---------------------------------------
+# The Hashtag Generator --------------------------------------
 def generate_hashtag(s):
     if not s:
         return False
@@ -7,12 +7,12 @@ def generate_hashtag(s):
     return hashtag if len(hashtag) <= 140 else False
 
 
-# Matrix Transpose --------------------------------------------
+# Matrix Transpose -------------------------------------------
 def transpose(matrix):
     return [list(row) for row in zip(*matrix)]
 
 
-# Persistent Bugger -------------------------------------------
+# Persistent Bugger ------------------------------------------
 def persistence(n):
     persistence_count = 0
     while n >= 10:
@@ -24,7 +24,7 @@ def persistence(n):
     return persistence_count
 
 
-# Bit Counting ------------------------------------------------
+# Bit Counting -----------------------------------------------
 def count_bits(n):
     return format(n, 'b').count('1')
 

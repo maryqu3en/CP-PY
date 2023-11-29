@@ -33,7 +33,7 @@ def is_triangle(a, b, c):
     return a + b > c and b + c > a and c + a > b
 
 
-# Regex validate PIN code --------------------------------------
+# Regex validate PIN code -------------------------------------
 def validate_pin(pin):
     return len(pin) in (4, 6) and pin.isdigit()
 
