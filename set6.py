@@ -51,4 +51,6 @@ def sort_array(src):
 
 
     
-    
+# Moving Zeros To The End -----------------------------------------------------------------
+def move_zeros(lst):
+    return [i for i in lst if i != 0] + [i for i in lst if i == 0]
