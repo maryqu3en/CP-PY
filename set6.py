@@ -1,4 +1,4 @@
-ùgit ù# Duplicate Encoder -------------------------------------------------------------------
+# Duplicate Encoder -------------------------------------------------------------------
 # def duplicate_encode(word):
 #     res = []
 #     word = word.lower()
@@ -27,7 +27,7 @@ def is_pangram(s):
     return True
 
 
-# Crack the PIN
+# Crack the PIN --------------------------------------------------------------------------
 from hashlib import md5
 def crack(hash):
     PIN = 0
@@ -36,5 +36,19 @@ def crack(hash):
             return str(PIN).zfill(5)
         PIN += 1
         
+
+
+# Sort the odd
+def sort_array(src):
+    for i in range(len(src)):
+        if src[i] % 2 != 0:
+            min = i
+            for j in range(i + 1, len(src)):
+                if src[j] % 2 != 0 and src[j] < src[min]:
+                    min = j
+            src[i], src[min] = src[min], src[i]
+    return src
+
+
     
     
