@@ -10,12 +10,18 @@ def what_century(year):
         case _ : return f"{year}th"
 
 
-# Which are in?
+# Which are in? ----------------------------------------------------------------------
+def in_array(array1, array2):
+    array1 = [e for i, e in enumerate(sorted(array1)) if i == 0 or e != sorted(array1)[i-1]]
+    array2 = ' '.join(array2)
+    return [word for word in array1 if word in array2]
 
-array1 = ["arp", "live", "strong"]
 
-array2 = ["lively", "alive", "harp", "sharp", "armstrong"]
-array2 = ' '.join(array2)
-print(array2)
+# 
 
-print([word for word in array1 if word in array2])
+
+
+#testing ------------------------------------------------------------------------------
+array1 = ['by', 'or', 've', 'wh', 'wh']
+array2 = ['why', 'where', 'whatever', 'orbit', 'ever', 'big', 'by', 'or']
+print(in_array(array1, array2))
