@@ -38,7 +38,7 @@ def crack(hash):
         
 
 
-# Sort the odd
+# Sort the odd ---------------------------------------------------------------------------
 def sort_array(src):
     for i in range(len(src)):
         if src[i] % 2 != 0:
