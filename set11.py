@@ -19,4 +19,13 @@ def encrypt(text, n):
     return text
 
 
-# 
+# Write Number in Expanded Form
+def expanded_form(num):
+    expanded = []
+    i = 1
+    while num != 0:
+        if num % pow(10, i) != 0:
+            expanded.append(str(num % pow(10, i)))
+        num -= num % pow(10, i)
+        i += 1
+    return ' + '.join(expanded[::-1])
