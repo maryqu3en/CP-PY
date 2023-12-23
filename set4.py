@@ -52,12 +52,25 @@ def domain_name(url):
 
 
 
-# testing -------------------------------------------------
+def dicipher_this(text):
+    if text == '':
+        return ''
+    text = text.split(' ')
+    for word in range(len(text)):
+        ascii_number = ''
+        for letter in text[word]:
+            if letter.isnumeric():
+                ascii_number += str(letter)
+                text[word] = text[word][1:]
+        text[word] = chr(int(ascii_number)) + f'{text[word][-1]}{text[word][1:-1]}{text[word][0]}'
+    return ' '.join(word for word in text)
 
-# message = "Good evening"
-# message = encrypt_this(message)
-# print("Encripted: ", message)
-# print("Decrypted: ", decipher_this(message))
+# testing -------------------------------------------------
+print("\n\n\n")
+message = "Good evening"
+message = encrypt_this(message)
+print("Encripted: ", message)
+print("Decrypted: ", dicipher_this(message))
 
 # --------------------------------------------
 # url = "https://www.cnet.com"
@@ -65,3 +78,4 @@ def domain_name(url):
 # url = "http://github.com/carbonfive/raygun"
 # print(domain_name(url))
 # -------------------------------------------
+print("\n\n\n")
