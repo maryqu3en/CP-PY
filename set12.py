@@ -24,6 +24,11 @@ def one_down(txt):
         return "Input is not a string"
     return "".join([chr((ord(c) - ord(c) - 1) % 26 + ord(c)) if c == "A" or c == "a" else chr(ord(c) - 1) if c.isalpha() else c for c in txt])
 
+# NOT MINE BUT LOVED SM --------------------------------------------------
+alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+correct = 'ZABCDEFGHIJKLMNOPQRSTUVWXYzabcdefghijklmnopqrstuvwxy'
+def one_down(txt):
+    return "Input is not a string" if type(txt)!=str else txt.translate(str.maketrans(alpha,correct))
 
 
 
