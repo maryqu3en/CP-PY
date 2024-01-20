@@ -64,3 +64,18 @@ def solution(roman: str) -> int:
             num += dic[roman[i]]
             i += 1
     return num
+
+
+# IP Validation
+def is_valid_IP(strng):
+    str = strng.split(".")
+    if len(str) != 4:
+        return False
+    for x in str:
+        if not x.isdigit():
+            return False
+        if int(x) not in range(256):
+            return False
+        if x != "0" and x[0] == "0":
+            return False
+    return True
