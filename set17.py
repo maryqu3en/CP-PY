@@ -8,14 +8,19 @@ def next_round(contestant):
         if scores[i] == 0 or scores[i] < scores[k-1]:
             break
         nxt += 1
-    # while scores[k] == scores[k+1]:
-    #     nxt+=1
     return nxt
-x= []
+# x= []
 # x.append("8 5")
 # x.append("10 9 8 7 7 7 5 5")
-x.append(input())
-x.append(input())
-print(next_round(x))
+# x.append(input())
+# x.append(input())
+# print(next_round(x))
 
 
+# Bit++
+def bitplusplus(n):
+    x = 0
+    for _ in range(n):
+        x += 1 if "++" in input() else -1
+    return x
+# print(bitplusplus(int(input())))
